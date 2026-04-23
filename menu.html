@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Menu - PizzaHot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP (optional animations) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+
+    <div class="logo">🍕 Wood-fired Pizza</div>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="customers.html">Customers</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="btn-order">Cart</a>
+
+  </div>
+</header>
+
+<!-- ===== MENU HERO ===== -->
+<section class="menu-hero">
+  <h1>Our Menu</h1>
+  <p>Fresh, hot & premium pizza delivered fast 🍕</p>
+</section>
+
+<!-- ===== FILTER BUTTONS ===== -->
+<div class="menu-filter">
+  <button onclick="showFull()" class="active">Full Menu</button>
+  <button onclick="showSet()">Combo Deals</button>
+</div>
+
+<!-- ===== MENU SECTION ===== -->
+<section class="menu-section container">
+
+  <!-- FULL MENU -->
+  <div id="fullMenu" class="menu-grid">
+
+    <div class="pizza-card">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
+      <div class="pizza-info">
+        <h3>Cheese Pizza</h3>
+        <p>Classic cheese with rich tomato base</p>
+        <div class="bottom">
+          <span>£8.99</span>
+          <button onclick="addToCart('Cheese Pizza', 8.99)">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-card">
+      <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e">
+      <div class="pizza-info">
+        <h3>Pepperoni</h3>
+        <p>Loaded with spicy pepperoni</p>
+        <div class="bottom">
+          <span>£10.99</span>
+          <button onclick="addToCart('Pepperoni', 10.99)">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-card">
+      <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94">
+      <div class="pizza-info">
+        <h3>Italian Special</h3>
+        <p>Authentic herbs & mozzarella</p>
+        <div class="bottom">
+          <span>£11.49</span>
+          <button onclick="addToCart('Italian', 11.49)">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-card">
+      <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65">
+      <div class="pizza-info">
+        <h3>Veggie Pizza</h3>
+        <p>Fresh vegetables & cheese</p>
+        <div class="bottom">
+          <span>£9.49</span>
+          <button onclick="addToCart('Veggie', 9.49)">Add</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SET MENU -->
+  <div id="setMenu" class="menu-grid" style="display:none;">
+
+    <div class="pizza-card">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+      <div class="pizza-info">
+        <h3>Combo 1</h3>
+        <p>Pizza + Drink</p>
+        <div class="bottom">
+          <span>£12.99</span>
+          <button onclick="addToCart('Combo 1', 12.99)">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-card">
+      <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add">
+      <div class="pizza-info">
+        <h3>Combo 2</h3>
+        <p>Pizza + Fries + Drink</p>
+        <div class="bottom">
+          <span>£13.99</span>
+          <button onclick="addToCart('Combo 2', 13.99)">Add</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== CART PANEL ===== -->
+<div class="cart-panel">
+
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+
+  <div class="cart-total">
+    <p>Subtotal: £<span id="subtotal">0</span></p>
+    <p>Delivery: £2</p>
+    <h3>Total: £<span id="total">0</span></h3>
+  </div>
+
+  <button class="checkout-btn" onclick="openPayment()">Checkout</button>
+
+  <!-- PAYMENT BOX -->
+  <div id="paymentBox" class="payment hidden">
+    <h3>Payment</h3>
+    <input placeholder="Card Number">
+    <input placeholder="Expiry Date">
+    <input placeholder="CVV">
+    <button onclick="placeOrder()">Pay Now</button>
+  </div>
+
+</div>
+
+<!-- ===== JS FILE ===== -->
+<script src="script.js"></script>
+
+</body>
+</html>
