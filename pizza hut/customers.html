@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers - PizzaHot</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+
+    <div class="logo">🍕 Wood-fired Pizza</div>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Customers</a></li>
+      </ul>
+    </nav>
+
+    <a href="menu.html" class="btn-order">Order Now</a>
+
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="customers-hero">
+  <h1>Our Happy Customers</h1>
+  <p>Real reviews from people who love our pizza 🍕</p>
+</section>
+
+<!-- ===== CUSTOMER REVIEWS ===== -->
+<section class="customers-section">
+
+  <div class="container">
+
+    <div class="customer-grid">
+
+      <!-- CARD 1 -->
+      <div class="customer-card">
+        <img src="images/user 1.jpeg" alt="John">
+        <h3>John</h3>
+        <div class="stars">★★★★★</div>
+        <p>"Best pizza I’ve ever had. Fresh, hot, and super delicious!"</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="customer-card">
+        <img src="images/user 2.jpeg" alt="Emily">
+        <h3>Emily</h3>
+        <div class="stars">★★★★★</div>
+        <p>"Amazing taste and very fast delivery. Highly recommended!"</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="customer-card">
+        <img src="images/user 3.jpeg" alt="Mike">
+        <h3>Mike</h3>
+        <div class="stars">★★★★☆</div>
+        <p>"Great quality pizza and nice service. Will order again!"</p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="customer-card">
+        <img src="images/user 4.jpeg" alt="Sophia">
+        <h3>Sophia</h3>
+        <div class="stars">★★★★★</div>
+        <p>"Loved the combo deals. Perfect for family nights!"</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section class="customer-cta">
+  <h2>Ready to try it yourself?</h2>
+  <a href="menu.html" class="btn-order">Order Now</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+
+  <div class="container footer-container">
+
+    <div class="footer-col">
+      <h2>🍕 Wood-fired Pizza</h2>
+      <p>Premium pizza crafted with fresh ingredients and delivered fast.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="#">Customers</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="#">FAQs</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 PizzaHot. All rights reserved.</p>
+  </div>
+
+</footer>
+
+<!-- ===== JS (OPTIONAL ANIMATION) ===== -->
+<script>
+  gsap.from(".customer-card", {
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+/* ===============================
+   RESET
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #0b0b0b;
+  color: #fff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ===============================
+   GLOBAL CONTAINER
+================================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===============================
+   SECTION BASE FIX (IMPORTANT)
+================================= */
+section {
+  padding: 90px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===============================
+   HEADER
+================================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(15px);
+  padding: 15px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-list a {
+  color: #ccc;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-list a:hover {
+  color: #fff;
+}
+
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: orange;
+  transition: 0.3s;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   BUTTON
+================================= */
+.btn-order {
+  background: linear-gradient(135deg, orange, #ff4500);
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-order:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   HERO
+================================= */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("images/wood-fire.jpg") center/cover no-repeat;
+  filter: blur(6px) brightness(0.35);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(255,140,0,0.25), transparent);
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 520px;
+  background: rgba(0,0,0,0.35);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-text h1 {
+  font-size: 52px;
+}
+
+.hero-text p {
+  color: #ccc;
+  margin: 15px 0;
+}
+
+.hero-image img {
+  width: 420px;
+  filter: drop-shadow(0 0 30px rgba(255,120,0,0.5));
+}
+
+/* ================= LOCATIONS ================= */
+.locations {
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.location-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  padding: 80px 20px;
+  background: #0d0d0d;
+  color: white;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #ff5a2c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #e14a1f;
+}
+
+/* =============================== */
+/* LOCATIONS COMMENT FIXED */
+/* =============================== */
+.locations {
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+}
+
+/* =============================== */
+.menu-hero {
+  text-align: center;
+  padding: 80px 20px 20px;
+}
+
+.menu-filter {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-filter button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #222;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu-filter button:hover,
+.menu-filter .active {
+  background: orange;
+  color: black;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 0 5%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.pizza-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.pizza-card:hover {
+  transform: scale(1.05);
+}
+
+.pizza-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pizza-info {
+  padding: 15px;
+}
+
+.pizza-info .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* =============================== */
+.customer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.customer-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* =============================== */
+.footer {
+  background: #0a0a0a;
+  padding: 60px 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+/* FIXED BROKEN SELECTOR */
+.footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: orange;
+}
+
+/* ================= HERO BACKGROUND FIX ================= */
+.hero-image {
+  display: none;
+}
+
+.hero-bg {
+  background: url("images/wood-fire.jpg") center/cover no-repeat !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.6)
+  ) !important;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .cart-panel {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
